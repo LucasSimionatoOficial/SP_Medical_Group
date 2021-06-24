@@ -138,6 +138,56 @@
             <param name="id">id da consulta</param>
             <returns>consulta</returns>
         </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IMedicoRepository.Criar(SP_Medical_Group.WebApi.Domains.Medico)">
+            <summary>
+            Cria medico
+            </summary>
+            <param name="medico">medico</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IMedicoRepository.Listar">
+            <summary>
+            Lista medicos
+            </summary>
+            <returns>medicos</returns>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IMedicoRepository.Atualizar(SP_Medical_Group.WebApi.Domains.Medico,System.Int32)">
+            <summary>
+            Atualiza medico
+            </summary>
+            <param name="medico">medico</param>
+            <param name="id">id</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IMedicoRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta medico
+            </summary>
+            <param name="id">id</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IPacienteRepository.Criar(SP_Medical_Group.WebApi.Domains.Paciente)">
+            <summary>
+            Cria paciente
+            </summary>
+            <param name="paciente">paciente</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IPacienteRepository.Listar">
+            <summary>
+            Lista pacientes
+            </summary>
+            <returns>pacientes</returns>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IPacienteRepository.Atualizar(SP_Medical_Group.WebApi.Domains.Paciente,System.Int32)">
+            <summary>
+            Atualiza pacientes
+            </summary>
+            <param name="paciente">paciente</param>
+            <param name="id">id</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IPacienteRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta paciente
+            </summary>
+            <param name="id">id</param>
+        </member>
         <member name="M:SP_Medical_Group.WebApi.Interfaces.ITipoUsuarioRepository.Criar(SP_Medical_Group.WebApi.Domains.TipoUsuario)">
             <summary>
             Cria um tipo de usuario
@@ -202,6 +252,56 @@
             Deleta usuario
             </summary>
             <param name="id">id do usuario</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Repositories.MedicoRepository.Atualizar(SP_Medical_Group.WebApi.Domains.Medico,System.Int32)">
+            <summary>
+            Atualiza medico
+            </summary>
+            <param name="medico">medico</param>
+            <param name="id">id</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Repositories.MedicoRepository.Criar(SP_Medical_Group.WebApi.Domains.Medico)">
+            <summary>
+            Cria medico
+            </summary>
+            <param name="medico">medico</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Repositories.MedicoRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta medico
+            </summary>
+            <param name="id">id</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Repositories.MedicoRepository.Listar">
+            <summary>
+            Lista medicos
+            </summary>
+            <returns>medicos</returns>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Repositories.PacienteRepository.Atualizar(SP_Medical_Group.WebApi.Domains.Paciente,System.Int32)">
+            <summary>
+            Atualiza pacientes
+            </summary>
+            <param name="paciente">paciente</param>
+            <param name="id">id</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Repositories.PacienteRepository.Criar(SP_Medical_Group.WebApi.Domains.Paciente)">
+            <summary>
+            Cria paciente
+            </summary>
+            <param name="paciente">paciente</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Repositories.PacienteRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta paciente
+            </summary>
+            <param name="id">id</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Repositories.PacienteRepository.Listar">
+            <summary>
+            Lista pacientes
+            </summary>
+            <returns>pacientes</returns>
         </member>
         <member name="M:SP_Medical_Group.WebApi.Repositories.TipoUsuarioRepository.BuscarPorId(System.Int32)">
             <summary>

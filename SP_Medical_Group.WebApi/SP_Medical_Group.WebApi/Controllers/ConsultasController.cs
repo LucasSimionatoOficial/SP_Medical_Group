@@ -19,7 +19,7 @@ namespace SP_Medical_Group.WebApi.Controllers
     {
         private IConsultumRepository _consultumRepository { get; set; }
 
-        ConsultasController()
+        public ConsultasController()
         {
             _consultumRepository = new ConsultumRepository();
         }
@@ -59,7 +59,7 @@ namespace SP_Medical_Group.WebApi.Controllers
         /// <param name="id">id da consulta</param>
         /// <param name="consulta">consulta</param>
         /// <returns>StatusCode 200 - Ok</returns>
-        [HttpPost("editar/{id}")]
+        [HttpPatch("editar/{id}")]
         [Authorize(Roles = "2")]
         public IActionResult UpdateDescricao(int id, Consultum consulta)
         {
@@ -79,7 +79,7 @@ namespace SP_Medical_Group.WebApi.Controllers
         [Authorize(Roles = "2")]
         public IActionResult GetConsultas()
         {
-            List<Consultum> Consultas = _consultumRepository.ListarMed(Convert.ToInt32(HttpContext.User.Claims.First(x => x.Type == JwtRegisteredClaimNames.Jti)));
+            List<Consultum> Consultas = _consultumRepository.ListarMed(Convert.ToInt32(HttpContext.User.Claims.First(x => x.Type == JwtRegisteredClaimNames.Jti).Value));
 
             return StatusCode(200, Consultas);
         }
@@ -92,10 +92,17 @@ namespace SP_Medical_Group.WebApi.Controllers
         [Authorize(Roles = "1")]
         public IActionResult Get()
         {
-            List<Consultum> Consultas = _consultumRepository.ListarPa(Convert.ToInt32(HttpContext.User.Claims.First(x => x.Type == JwtRegisteredClaimNames.Jti)));
+            List<Consultum> Consultas = _consultumRepository.ListarPa(Convert.ToInt32(HttpContext.User.Claims.First(x => x.Type == JwtRegisteredClaimNames.Jti).Value));
 
             return StatusCode(200, Consultas);
         }
 
+        [HttpGet("listaradm/")]
+        public IActionResult ListarAdmin()
+        {
+            List<Consultum> consultas = _consultumRepository.Listar();
+
+            return StatusCode(200, consultas);
+        }
     }
 }

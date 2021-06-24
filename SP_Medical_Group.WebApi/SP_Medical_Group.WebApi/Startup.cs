@@ -27,6 +27,18 @@ namespace SP_Medical_Group.WebApi
                     options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
                 });
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder =>
+                    {
+                        builder.WithOrigins("http://localhost:3000")
+                                                                    .AllowAnyHeader()
+                                                                    .AllowAnyMethod();
+                    }
+                    );
+            });
+
             services.AddSwaggerGen( c=> {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "SP_Medical_Group.WebApi", Version = "v1" });
 
@@ -38,7 +50,7 @@ namespace SP_Medical_Group.WebApi
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = "JwtBearer";
-                options.DefaultChallengeScheme = "JtwBearer";
+                options.DefaultChallengeScheme = "JwtBearer";
             })
                 .AddJwtBearer("JwtBearer", options =>
                 {
@@ -81,6 +93,8 @@ namespace SP_Medical_Group.WebApi
             app.UseAuthentication();
 
             app.UseAuthorization();
+
+            app.UseCors("CorsPolicy");
 
             app.UseEndpoints(endpoints =>
             {

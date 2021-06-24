@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Documents\\Desenvolvimento web senai\\2 Semestre\\Senai_22S_Sprint2_back-end\\SP_Medical_Group\\SP_Medical_Group.WebApi\\SP_Medical_Group.WebApi\\SP_Medical_Group.WebApi.csproj": {}
+    "C:\\Users\\User\\Documents\\Desenvolvimento web senai\\2 Semestre\\SP_Medical_Group\\SP_Medical_Group.WebApi\\SP_Medical_Group.WebApi\\SP_Medical_Group.WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Documents\\Desenvolvimento web senai\\2 Semestre\\Senai_22S_Sprint2_back-end\\SP_Medical_Group\\SP_Medical_Group.WebApi\\SP_Medical_Group.WebApi\\SP_Medical_Group.WebApi.csproj": {
+    "C:\\Users\\User\\Documents\\Desenvolvimento web senai\\2 Semestre\\SP_Medical_Group\\SP_Medical_Group.WebApi\\SP_Medical_Group.WebApi\\SP_Medical_Group.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\Desenvolvimento web senai\\2 Semestre\\Senai_22S_Sprint2_back-end\\SP_Medical_Group\\SP_Medical_Group.WebApi\\SP_Medical_Group.WebApi\\SP_Medical_Group.WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\Desenvolvimento web senai\\2 Semestre\\SP_Medical_Group\\SP_Medical_Group.WebApi\\SP_Medical_Group.WebApi\\SP_Medical_Group.WebApi.csproj",
         "projectName": "SP_Medical_Group.WebApi",
-        "projectPath": "C:\\Users\\User\\Documents\\Desenvolvimento web senai\\2 Semestre\\Senai_22S_Sprint2_back-end\\SP_Medical_Group\\SP_Medical_Group.WebApi\\SP_Medical_Group.WebApi\\SP_Medical_Group.WebApi.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\Desenvolvimento web senai\\2 Semestre\\SP_Medical_Group\\SP_Medical_Group.WebApi\\SP_Medical_Group.WebApi\\SP_Medical_Group.WebApi.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Documents\\Desenvolvimento web senai\\2 Semestre\\Senai_22S_Sprint2_back-end\\SP_Medical_Group\\SP_Medical_Group.WebApi\\SP_Medical_Group.WebApi\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\Desenvolvimento web senai\\2 Semestre\\SP_Medical_Group\\SP_Medical_Group.WebApi\\SP_Medical_Group.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

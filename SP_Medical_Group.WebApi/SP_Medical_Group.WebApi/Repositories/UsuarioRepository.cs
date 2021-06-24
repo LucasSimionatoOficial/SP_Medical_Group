@@ -89,7 +89,15 @@ namespace SP_Medical_Group.WebApi.Repositories
         /// <returns>Lista de usuarios</returns>
         public List<Usuario> Listar()
         {
-            return ctx.Usuarios.Include(x => x.IdTipoUsuarioNavigation).Include(x => x.IdClinicaNavigation).ToList();
+            return ctx.Usuarios.Include(x => x.IdTipoUsuarioNavigation).Include(x => x.IdClinicaNavigation).Select(x => new Usuario(){
+                Nome = x.Nome,
+                IdUsuario = x.IdUsuario,
+                IdClinicaNavigation = new Clinica() {
+                    IdClinica = x.IdClinicaNavigation.IdClinica,
+                    NomeFantasia = x.IdClinicaNavigation.NomeFantasia
+                }
+
+            }).ToList();
         }
     }
 }

@@ -44,7 +44,8 @@ namespace SP_Medical_Group.WebApi.Controllers
             {
                 new Claim(JwtRegisteredClaimNames.Email, usuarioLogado.Email),
                 new Claim(JwtRegisteredClaimNames.Jti, usuarioLogado.IdUsuario.ToString()),
-                new Claim(ClaimTypes.Role, usuarioLogado.IdTipoUsuario.ToString())
+                new Claim(ClaimTypes.Role, usuarioLogado.IdTipoUsuario.ToString()),
+                new Claim("role", usuarioLogado.IdTipoUsuario.ToString())
             };
 
             var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("SP_Medical_group"));

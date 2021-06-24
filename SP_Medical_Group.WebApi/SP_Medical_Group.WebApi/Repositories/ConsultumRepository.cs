@@ -1,4 +1,5 @@
-﻿using SP_Medical_Group.WebApi.Contexts;
+﻿using Microsoft.EntityFrameworkCore;
+using SP_Medical_Group.WebApi.Contexts;
 using SP_Medical_Group.WebApi.Domains;
 using SP_Medical_Group.WebApi.Interfaces;
 using System;
@@ -65,7 +66,11 @@ namespace SP_Medical_Group.WebApi.Repositories
 
         public List<Consultum> Listar()
         {
-            return ctx.Consulta.ToList();
+            List<Consultum> Consultas = ctx.Consulta
+                .Include(x => x.IdMedicoNavigation)
+                .Include(x => x.IdPacienteNavigation)
+                .Include(x => x.IdSituacaoNavigation).ToList();
+            return Consultas;
         }
 
         public List<Consultum> ListarPa(int id)
@@ -75,7 +80,7 @@ namespace SP_Medical_Group.WebApi.Repositories
         
         public List<Consultum> ListarMed(int id)
         {
-            return ctx.Consulta.Where(x => x.IdMedico == id).ToList();
+            return ctx.Consulta.Where(x => x.IdMedicoNavigation.IdUsuario == id).ToList();
         }
     }
 }
